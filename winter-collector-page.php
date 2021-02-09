@@ -1,6 +1,19 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collected Cats</title>
+    <link href="winter-collector-page.css" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
+</head>
+<body>
 
-require_once 'winter-collector-page.html';
+<h1>Collected Cats</h1>
+
+<h2>Welcome to your cat collection! Here you can see a list of all your cats!</h2>
+
+
+<?php
 
 $db = new PDO ('mysql:host=db;dbname=winter-collector-page', 'root', 'password');
 
@@ -30,60 +43,65 @@ echo "</section>";
 
 
 
+?>
+</body>
+
+</html>
 
 
-// TABLE??
-//echo "<table><th>Name</th><th>Colour</th><th>Weight</th><th>Age</th><th>Breed</th>";
-//
-//foreach ($allResults as $row) {
-//    echo "<tr>";
-//    echo "<th>" . $row["name"] . " | " . $row["colour"] . " | " .
-//        $row["weight"] . "kg | " . $row["age"] . " | " . $row["breed"] . "</tr>";
-//}
-//echo '</table>';
 
-// I DON'T KNOW WHAT I WAS TRYING TO DO HERE BUT OK?
-//echo "</table>";
-//
-//echo "<table>";
-//
-//// NAME
-//echo "<tr><th>Name</th>";
-//foreach ($allResults as $row) {
-//    echo "<td>" . $row["name"] . "</td>";
-//}
-//echo "</tr>";
-//
-////COLOUR
-//echo "<tr><th>Colour</th>";
-//
-//foreach ($allResults as $row) {
-//    echo "<td>" . $row["colour"] . "</td>";
-//}
-//echo "</tr>";
-//
-////BREED
-//echo "<tr><th>Breed</th>";
-//
-//foreach ($allResults as $row) {
-//    echo "<td>" . $row["breed"] . "</td>";
-//}
-//echo "</tr>";
-//
-//// AGE
-//echo "<tr><th>Age</th>";
-//
-//foreach ($allResults as $row) {
-//    echo "<td>" . $row["age"] . "years" . "</td>";
-//}
-//echo "</tr>";
-//
-////WEIGHT
-//echo "<tr><th>Weight</th>";
-//
-//foreach ($allResults as $row) {
-//    echo "<td>" . $row["weight"] . "kg" . "</td>";
-//}
-//echo "</tr>";
-//
-//echo '</table>';
+<!--// TABLE?? -->
+<!--//echo "<table><th>Name</th><th>Colour</th><th>Weight</th><th>Age</th><th>Breed</th>";-->
+<!--//-->
+<!--//foreach ($allResults as $row) {-->
+<!--//    echo "<tr>";-->
+<!--//    echo "<th>" . $row["name"] . " | " . $row["colour"] . " | " .-->
+<!--//        $row["weight"] . "kg | " . $row["age"] . " | " . $row["breed"] . "</tr>";-->
+<!--//}-->
+<!--//echo '</table>';-->
+<!---->
+<!--// I DON'T KNOW WHAT I WAS TRYING TO DO HERE BUT OK?-->
+<!--//echo "</table>";-->
+<!--//-->
+<!--//echo "<table>";-->
+<!--//-->
+<!--//// NAME-->
+<!--//echo "<tr><th>Name</th>";-->
+<!--//foreach ($allResults as $row) {-->
+<!--//    echo "<td>" . $row["name"] . "</td>";-->
+<!--//}-->
+<!--//echo "</tr>";-->
+<!--//-->
+<!--////COLOUR-->
+<!--//echo "<tr><th>Colour</th>";-->
+<!--//-->
+<!--//foreach ($allResults as $row) {-->
+<!--//    echo "<td>" . $row["colour"] . "</td>";-->
+<!--//}-->
+<!--//echo "</tr>";-->
+<!--//-->
+<!--////BREED-->
+<!--//echo "<tr><th>Breed</th>";-->
+<!--//-->
+<!--//foreach ($allResults as $row) {-->
+<!--//    echo "<td>" . $row["breed"] . "</td>";-->
+<!--//}-->
+<!--//echo "</tr>";-->
+<!--//-->
+<!--//// AGE-->
+<!--//echo "<tr><th>Age</th>";-->
+<!--//-->
+<!--//foreach ($allResults as $row) {-->
+<!--//    echo "<td>" . $row["age"] . "years" . "</td>";-->
+<!--//}-->
+<!--//echo "</tr>";-->
+<!--//-->
+<!--////WEIGHT-->
+<!--//echo "<tr><th>Weight</th>";-->
+<!--//-->
+<!--//foreach ($allResults as $row) {-->
+<!--//    echo "<td>" . $row["weight"] . "kg" . "</td>";-->
+<!--//}-->
+<!--//echo "</tr>";-->
+<!--//-->
+<!--//echo '</table>';-->
