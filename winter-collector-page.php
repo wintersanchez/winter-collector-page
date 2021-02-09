@@ -26,7 +26,7 @@ $allResults = $query->fetchAll(\PDO::FETCH_ASSOC);
 echo "<section>";
 foreach ($allResults as $row) {
     echo "<div>";
-    echo "<img src='img-id'" . $row["id"] . ".jpg" . "/>";
+    echo "<img src='collector-website-images/img-" . $row["id"] . ".jpg'" . "/>";
     echo "<ul>";
     echo "<li><h3>Name:</h3> " . $row["name"] . "</li>";
     echo "<li><h3>Colour:</h3> " . $row["colour"] . "</li>";
