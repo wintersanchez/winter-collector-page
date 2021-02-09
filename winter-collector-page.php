@@ -26,13 +26,14 @@ $allResults = $query->fetchAll(\PDO::FETCH_ASSOC);
 echo "<section>";
 foreach ($allResults as $row) {
     echo "<div>";
-    echo "<ul>
-        <li><h3>Name:</h3> " . $row["name"] . "</li>" .
-        "<li><h3>Colour:</h3> " . $row["colour"] . "</li>" .
-        "<li><h3>Weight:</h3> " . $row["weight"] . "kg</li>" .
-        "<li><h3>Age:</h3> " . $row["age"] . "</li>" .
-        "<li><h3>Breed:</h3> " . $row["breed"] . "</li>
-        </ul>";
+    echo "<img src='img-id'" . $row["id"] . ".jpg" . "/>";
+    echo "<ul>";
+    echo "<li><h3>Name:</h3> " . $row["name"] . "</li>";
+    echo "<li><h3>Colour:</h3> " . $row["colour"] . "</li>";
+    echo "<li><h3>Weight:</h3> " . $row["weight"] . "kg</li>";
+    echo "<li><h3>Age:</h3> " . $row["age"] . "</li>";
+    echo "<li><h3>Breed:</h3> " . $row["breed"] . "</li>";
+    echo "</ul>";
     echo "<br>";
     echo "<br>";
     echo "<form method='post' action='delete'>";
