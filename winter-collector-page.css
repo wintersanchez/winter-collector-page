@@ -9,7 +9,7 @@ html {
 h1, h2 {
     text-align: center;
     margin: auto;
-    width: 50%;
+    width: 85%;
     align: center;
 }
 
@@ -27,26 +27,26 @@ h3 {
     text-align: center;
 }
 
-section {
+section.allItemsSection {
     display: flex;
     flex-direction: row;
-    margin: 50px;
-    font-size: 20px;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 5px;
+    margin: 20px;
+    font-size: 2rem;
+    justify-content: center;
+    padding: 15px;
     text-align: center;
+    align-content: center;
 }
 
 ul {
     list-style-type:none;
     background: rgb(168, 149, 123);
     margin: 15px;
-    align: center;
+    border-radius: 5px;
 }
 
 div {
-    align: center;
     width: 30%;
 }
 
@@ -54,26 +54,154 @@ button {
     background: rgb(168, 149, 123);
 }
 
-li {
+img {
+    width: 100%;
+}
+
+ul.databaseItemInfo {
+    width: auto;
+}
+
+.databaseItemInfo li {
     color: rgb(33, 20, 4);
     line-height: 30px;
 }
 
+div.itemInfoDiv {
+    background-color: rgb(240, 231, 211);
+    max-width: 300px;
+    margin: 0 10px 20px 10px;
+    padding: 15px;
+}
+
+button.deleteButton {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(33, 20, 4, 0.3);
+    border-radius: 8px 30px;
+    height: 40px;
+    width: 80px;
+    font-size: 2.7rem;
+}
+
+button.deleteButton:hover {
+    background-color: salmon;
+}
+
+a, .navBarLink {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(240, 231, 211);
+    font-size: 2.5rem;
+}
+
+.navBarLink:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(33, 20, 4);
+    border-radius: 10px;
+}
+
+.navBar {
+    display: flex;
+    flex-display: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.navBarItems {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+footer.pageFooter {
+    background: rgb(168, 149, 123);
+    color: rgb(33, 20, 4);
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+}
 
 
-/*table {*/
-/*    margin: 20px;*/
-/*    font-size: 30px;*/
-/*    border: 1px solid #ddd;*/
-/*    padding: 10px;*/
-/*}*/
 
-/*th {*/
-/*    background-color: #E1882F;*/
-/*    padding: 10px;*/
-/*}*/
+@media screen and (max-width: 965px) {
+    body {
+    }
 
-/*tr {*/
-/*    border: 0px solid #ddd;*/
-/*    background-color: red;*/
-/*}*/
+    .navBar {
+        display: flex;
+        width: 85%;
+        align-content: center;
+        margin: 0 auto;
+    }
+
+    .navBarItems {
+        display: inline-block;
+        width: 70%;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    section.allItemsSection {
+        min-width: 200px;
+    }
+
+    div.itemInfoDiv {
+        min-width: 300px;
+    }
+
+    @media screen and (max-width: 865px) {
+        body {
+        }
+
+        .navBar {
+            display: flex;
+            width: 85%;
+            align-content: center;
+            margin: 0 auto;
+        }
+
+        .navBarItems {
+            display: inline-block;
+            width: 70%;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        section.allItemsSection {
+            min-width: 200px;
+        }
+
+        div.itemInfoDiv {
+            min-width: 200px;
+        }
+
+        @media screen and (max-width: 700px) {
+            body {
+            }
+
+            .navBar {
+                display: flex;
+                width: 60%;
+                align-content: center;
+                margin: 0 auto;
+            }
+
+            .navBarItems {
+                display: inline-block;
+                width: 70%;
+                line-height: 40px;
+                text-align: center;
+            }
+
+            div.itemInfoDiv {
+                min-width: 350px;
+                max-width: 390px;
+            }
+        }
+    }
+}
