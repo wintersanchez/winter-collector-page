@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Collected Cats</title>
-    <link rel="icon" type="image/png?" href="icon/cat.png"/>
+    <title alt='page-title-collected-cats'>Collected Cats</title>
+    <link alt='cat-icon' rel="icon" type="image/png?" href="icon/cat.png"/>
 
     <link href="winter-collector-page.css" rel="stylesheet">
     <link href="normalize.css" rel="stylesheet">
@@ -11,12 +11,12 @@
 <body>
 
 
-<nav class="navBar">
-    <ul class="navBarItems">
-        <li class="navBarItem"><a class="navBarLink" href="#">Home</a></li>
-        <li class="navBarItem"><a class="navBarLink" href="#">Your Profile</a></li>
-        <li class="navBarItem"><a class="navBarLink" href="#">Add New Cats?</a></li>
-        <li class="navBarItem"><a class="navBarLink" href="#">Contact</a></li>
+<nav class="navBar" alt="navigation-bar">
+    <ul class="navBarItems" alt="navigation-bar-links">
+        <li class="navBarItem"><a class="navBarLink" href="#" alt="home">Home</a></li>
+        <li class="navBarItem"><a class="navBarLink" href="#" alt="your-profile">Your Profile</a></li>
+        <li class="navBarItem"><a class="navBarLink" href="#" alt="add-new-cats">Add New Cats?</a></li>
+        <li class="navBarItem"><a class="navBarLink" href="#" alt="contact">Contact</a></li>
     </ul>
 </nav>
 
@@ -41,14 +41,14 @@ $getCatInfo -> execute();
 
 $allCatInfo = $getCatInfo->fetchAll(\PDO::FETCH_ASSOC);
 
-$CatItemNumber = 1;
+$catItemNumber = 1;
 
 echo "<section class='allItemsSection'>";
 foreach ($allCatInfo as $row) {
     echo "<div class='itemInfoDiv'>";
-    echo "<img src='collector-website-images/img-" . $row["id"] . ".jpg'" . "/>";
-    echo '<h2>Cat ' . $CatItemNumber . '</h2>';
-    $CatItemNumber++;
+    echo "<img src='collector-website-images/img-" . $row["id"] . ".jpg' alt='cat-picture'" . "/>";
+    echo '<h2 alt="cat-item-number">Cat ' . $catItemNumber . '</h2>';
+    $catItemNumber++;
     echo "<ul class='databaseItemInfo'>";
     echo "<li><h3>Name:</h3> " . $row["name"] . "</li>";
     echo "<li><h3>Colour:</h3> " . $row["colour"] . "</li>";
@@ -60,7 +60,7 @@ foreach ($allCatInfo as $row) {
     echo "<br>";
     echo "<form method='POST'>";
     echo "<input type='hidden' name='delete' value='" . $row["id"] . "' />";
-    echo "<button type='submit' class='deleteButton'>Delete</button>";
+    echo "<button type='submit' class='deleteButton' alt='delete-item-button'>Delete</button>";
     echo "</form>";
     echo "</div>";
 }
