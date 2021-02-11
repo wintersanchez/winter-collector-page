@@ -1,30 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title alt='page-title-collected-cats'>Collected Cats</title>
-    <link alt='cat-icon' rel="icon" type="image/png?" href="icon/cat.png"/>
-
-    <link href="winter-collector-page.css" rel="stylesheet">
-    <link href="normalize.css" rel="stylesheet">
-</head>
-<body>
-
-
-<nav class="navBar" alt="navigation-bar">
-    <ul class="navBarItems" alt="navigation-bar-links">
-        <li class="navBarItem"><a class="navBarLink" href="#" alt="home">Home</a></li>
-        <li class="navBarItem"><a class="navBarLink" href="#" alt="your-profile">Your Profile</a></li>
-        <li class="navBarItem"><a class="navBarLink" href="#" alt="add-new-cats">Add New Cats?</a></li>
-        <li class="navBarItem"><a class="navBarLink" href="#" alt="contact">Contact</a></li>
-    </ul>
-</nav>
-
-<h1>Collected Cats</h1>
-
-<h2>Welcome to your cat collection! <br/>Here you can see a list of all your cats...</h2>
-
-
 <?php
 
 $db = new PDO ('mysql:host=db;dbname=winter-collector-page', 'root', 'password');
@@ -42,6 +15,26 @@ $getCatInfo -> execute();
 $allCatInfo = $getCatInfo->fetchAll(\PDO::FETCH_ASSOC);
 
 $catItemNumber = 1;
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title alt='page-title-collected-cats'>Collected Cats</title>
+    <link alt='cat-icon' rel="icon" type="image/png?" href="icon/cat.png"/>
+
+    <link href="winter-collector-page.css" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>Collected Cats</h1>
+
+<h2>Welcome to your cat collection! <br/>Here you can see a list of all your cats...</h2>
+
+<?php
 
 echo "<section class='allItemsSection'>";
 foreach ($allCatInfo as $row) {
