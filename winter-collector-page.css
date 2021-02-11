@@ -10,7 +10,6 @@ h1, h2 {
     text-align: center;
     margin: auto;
     width: 85%;
-    align: center;
 }
 
 h1 {
@@ -33,7 +32,7 @@ section.allItemsSection {
     flex-wrap: wrap;
     margin: 20px;
     font-size: 2rem;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 15px;
     text-align: center;
     align-content: center;
@@ -44,10 +43,6 @@ ul {
     background: rgb(168, 149, 123);
     margin: 15px;
     border-radius: 5px;
-}
-
-div {
-    width: 30%;
 }
 
 button {
@@ -69,6 +64,7 @@ ul.databaseItemInfo {
 
 div.itemInfoDiv {
     background-color: rgb(240, 231, 211);
+    width: 25%;
     max-width: 300px;
     margin: 0 10px 20px 10px;
     padding: 15px;
@@ -153,6 +149,7 @@ footer.pageFooter {
     div.itemInfoDiv {
         min-width: 300px;
     }
+}
 
     @media screen and (max-width: 865px) {
         body {
@@ -179,6 +176,7 @@ footer.pageFooter {
         div.itemInfoDiv {
             min-width: 200px;
         }
+    }
 
         @media screen and (max-width: 700px) {
             body {
@@ -203,5 +201,3 @@ footer.pageFooter {
                 max-width: 390px;
             }
         }
-    }
-}
